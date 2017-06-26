@@ -10,7 +10,7 @@ class WeatherApp extends React.Component{
   render(){
     return(
       <div>
-        <h2>Hello to the {this.props.name} app!</h2>
+        <h2>Hello to the {this.props.name} app! </h2>
         <Button/>
         <CloudIcon/>
       </div>
