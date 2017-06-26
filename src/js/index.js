@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../css/index.css';
+import WeatherIcons from 'react-weathericons';
 
 
 //Create  component as a class, the newest way to build the component
@@ -8,12 +9,34 @@ import '../css/index.css';
 class WeatherApp extends React.Component{
   render(){
     return(
-      <h2>Hello to the weather app!</h2>
+      <div>
+        <h2>Hello to the {this.props.name} app!</h2>
+        <Button/>
+        <CloudIcon/>
+      </div>
     );
   }
 }
 
+const element = <WeatherApp name="weather"/>;
 
+class CloudIcon extends React.Component{
+  render(){
+    return(
+      <div>
+        <WheatherIcons name="cloud" size="2x"/>
+      </div>
+    );
+  }
+}
+
+class Button extends React.Component{
+  render(){
+    return(
+      <button> Nada </button>
+    );
+  }
+}
 
 // function formatName(user) {
 //   return user.firstName + ' ' + user.lastName;
@@ -52,7 +75,6 @@ class WeatherApp extends React.Component{
 //
 //
 ReactDOM.render(
-  // element,
-  <WeatherApp/>,
+  element,
   document.getElementById('root')
 );
